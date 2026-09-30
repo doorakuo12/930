@@ -1,0 +1,66 @@
+body{
+        text-align: center; /* 文字置中 */
+        background: #725141;
+        color: #ffffff; /*文字顏色*/
+        padding: 0;/*內距*/
+        margin: 0;
+
+}
+
+nav{
+        background: #f7b2e3;
+}
+
+nav a{
+        background: rgb(131, 234, 196);/* 字的下面出現顏色 */
+        Padding: 20px;/* 上下加厚 */
+        display: inline-block;
+
+        color: rgb(0, 0, 0); 
+        text-decoration: none;/* 不出現超連結底線 */
+}
+
+nav a:hover{
+        background: #fff59f;
+        color: #000000;
+}
+
+section{
+      width: 80%; /*視窗的80%*/
+      margin: auto; /*物件置中*/
+}
+
+/*article*/
+article{
+        display: inline-block;
+        border:solid 3px rgb(131, 234, 196);
+        width: 200px;
+        margin: 50px;
+}
+
+article img{
+        width: 80%;
+        border-radius: 50%; /*倒Ｒ角，方形圖才會呈圓形*/
+}
+
+article a{
+         display: inline-block;
+         color: #ffffff;
+         background: #f7b2e3;
+         text-decoration: none;/* 不出現超連結底線 */
+        padding-bottom: 20px;/* 下面空行間距*/
+}
+
+article a:hover{   /*碰到時*/
+        background: #fff59f;
+        color: #000000;
+}
+
+article a:active{    /*點擊時*/
+        background: #725141;
+        color: #000000;
+}
+
+footer{ 
+        margin: 50px;
+}
