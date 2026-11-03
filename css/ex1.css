@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
 body{
         text-align: center; /* 文字置中 */
         background: #725141;
         color: #ffffff; /*文字顏色*/
         padding: 0;/*內距*/
         margin: 0;
-
+        font-family: "Chelsea Market", system-ui;
 }
 
 nav{
@@ -64,4 +66,48 @@ article a:active{    /*點擊時*/
 footer{ 
         margin: 50px;
         color: #f7b2e3;
+}
+
+/* ==================================
+   撞撞 Logo
+================================== */
+#dvdLogo {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 90px;
+    height: 90px;
+    z-index: 99999;
+    display: block;
+    cursor: pointer;
+}
+
+#dvdLogo img {
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-tooltip {
+    position: absolute;
+    left: 80%;
+    bottom: 60%;
+    transform: translateX(-50%) translateY(-8px);
+    padding: 8px 14px;
+    background-color: #CE8C48;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    border-radius: 20px;
+    visibility: hidden;
+    transition: 0.35s ease;
+    opacity: 0;
+}
+
+#dvdLogo:hover .logo-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-12px);
 }

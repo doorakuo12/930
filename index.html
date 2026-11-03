@@ -19,9 +19,9 @@ content=" width=device-width,initial-scale=1.0 ">
 </header>
 
 <nav>
-    <a href="#" target="_blank">\ 平時作業 /</a>
-    <a href="#">\ 期中作業 /</a>
-    <a href="#">\ 期末作業 /</a>
+    <a href="#" target="_blank">\ 平時作業（本網站） /</a>
+    <a href="https://dorakuostudio.vercel.app/p2.html">\ 期中作業 /</a>
+    <a href="#">\ 期末作業（未開放） /</a>
 </nav>
 
 <section>
@@ -47,7 +47,7 @@ content=" width=device-width,initial-scale=1.0 ">
         <a href="https://ex3-gray.vercel.app/">
         <h2>10/21</h2>
         <p>作業③ ＃今天氣哪玩</p>
-        <img src="images/3_travel.JPG">
+        <img src="images/3_story.JPG">
         </a>
         </article>
 
@@ -57,6 +57,59 @@ content=" width=device-width,initial-scale=1.0 ">
 Follow me for more! Ig( 氣炸kuo @dooraku_o ) ✎☺︎
 &copy;All Right Reserved.
 </footer>
+
+<!-- 撞撞logo -->
+    <a href="https://dorakuostudio.vercel.app/p2.html" id="dvdLogo">
+        <img src="images/logo.png" alt="My Logo">
+        <span class="logo-tooltip"> <!--hover視窗-->
+            查看偶ㄉ期中作業！
+        </span>
+    </a>
+
+    <!-- java互動 -->
+    <script>
+        const logo = document.getElementById("dvdLogo");
+
+        let x = 100;
+        let y = 100;
+        let speedX = 2.5;
+        let speedY = 2;
+
+        function moveLogo() {
+            // 修復：補上了缺少的減號
+            const maxX = window.innerWidth - logo.offsetWidth;
+            const maxY = window.innerHeight - logo.offsetHeight;
+
+            x += speedX;
+            y += speedY;
+
+            // 左右邊界反彈
+            if (x >= maxX || x <= 0) {
+                speedX *= -1;
+                x = Math.max(0, Math.min(x, maxX));
+            }
+
+            // 上下邊界反彈
+            if (y >= maxY || y <= 0) {
+                speedY *= -1;
+                y = Math.max(0, Math.min(y, maxY));
+            }
+
+            logo.style.left = x + "px";
+            logo.style.top = y + "px";
+
+            requestAnimationFrame(moveLogo);
+        }
+
+        moveLogo();
+
+        // 視窗縮放時重新限制位置
+        window.addEventListener("resize", () => {
+            // 修復：補上了缺少的減號
+            x = Math.min(x, window.innerWidth - logo.offsetWidth);
+            y = Math.min(y, window.innerHeight - logo.offsetHeight);
+        });
+    </script>
 
 
 </body>
